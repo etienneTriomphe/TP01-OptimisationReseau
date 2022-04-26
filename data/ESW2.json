@@ -10,20 +10,16 @@
     ],
     "interfaces":[
         {
-            "name":"f1/0.10",
+            "name":"fa1/0",
             "mode":"trunk"
-        },
+        },        
         {
-            "name":"f1/0.20",
-            "mode":"trunk"
-        },
-        {
-            "name":"f1/2",
+            "name":"fa1/2",
             "vlan_id":"20",
             "mode":"access"
         },
         {
-            "name":"f1/1",
+            "name":"fa1/1",
             "vlan_id":"10",
             "mode":"access"
         }
