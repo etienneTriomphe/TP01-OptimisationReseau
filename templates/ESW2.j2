@@ -10,6 +10,7 @@ switchport mode {{interface.mode}}
 switchport {{interface.mode}} vlan {{interface.vlan_id}}
 {%endif%}
 {% if interface.mode == "trunk"%}
+switchport {{interface.mode}} encapsulation dot1q
 switchport mode {{interface.mode}}
 switchport {{interface.mode}} allowed vlan all
 {%endif%}
