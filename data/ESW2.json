@@ -1,0 +1,32 @@
+{
+    "hostname":"ESW2",
+    "vlans":[
+    {
+        "vlan_id":"10"
+    },
+    {
+        "vlan_id":"20"
+    }  
+    ],
+    "interfaces":[
+        {
+            "name":"f1/0.10",
+            "mode":"trunk"
+        },
+        {
+            "name":"f1/0.20",
+            "mode":"trunk"
+        },
+        {
+            "name":"f1/2",
+            "vlan_id":"20",
+            "mode":"access"
+        },
+        {
+            "name":"f1/1",
+            "vlan_id":"10",
+            "mode":"access"
+        }
+    ]
+
+}

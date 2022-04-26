@@ -1,0 +1,8 @@
+hostname {{hostname}}
+{% for interface in interfaces %}
+interface {{interface.name}}
+ip address {{interface.ip}} {{interface.mask}}
+encapsulation dot1q {{interface.vlan_id}} native
+no shut
+exit
+{% endfor %}
