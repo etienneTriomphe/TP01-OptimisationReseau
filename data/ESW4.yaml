@@ -1,0 +1,28 @@
+hostname: 'ESW4'
+vlans:
+-
+  id: '10'
+  name: 'student'
+-
+  id: '20'
+  name: 'teacher'
+-
+  id: '99'
+  name: 'admin'
+interfaces:
+-
+  name: 'Vlan99'
+  ip : '172.16.100.253'
+  mask: '255.255.255.192'
+-
+  name: 'fa1/0'
+  mode: 'trunk'
+-
+  name: 'fa1/1'
+  mode: 'access'
+  vlan_id: '10'
+-
+  name: 'fa1/2'
+  mode: 'access'
+  vlan_id: '20'
+

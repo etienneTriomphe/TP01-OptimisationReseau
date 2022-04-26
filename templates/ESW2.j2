@@ -1,6 +1,6 @@
 hostname {{hostname}}
 {% for vlan in vlans%}
-vlan {{vlan.vlan_id}}
+vlan {{vlan.id}}
 exit
 {% endfor %}
 {% for interface in interfaces %}
@@ -9,10 +9,12 @@ interface {{interface.name}}
 switchport mode {{interface.mode}}
 switchport {{interface.mode}} vlan {{interface.vlan_id}}
 {%endif%}
-{% if interface.mode == "trunk"%}
+{% elif interface.mode == "trunk"%}
 switchport {{interface.mode}} encapsulation dot1q
 switchport mode {{interface.mode}}
 switchport {{interface.mode}} allowed vlan all
+{% else interface.mode is not defined%}
+
 {%endif%}
 no shut
 exit
