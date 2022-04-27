@@ -1,7 +1,7 @@
 hostname {{hostname}}
 {% for interface in interfaces %}
 interface {{interface.name}}
-{% if interface.name.endwith('99') or interface.name.endwith('20') or interface.name.endwith('10')}
+{% if '99' in interface.name  or '20' in interface.name or '10' in interface.name%}
 encapsulation dot1q {{interface.vlan_id}}
 ip address {{interface.ip}} {{interface.mask}}
 {%endif%}
